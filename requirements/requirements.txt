@@ -1,0 +1,19 @@
+# Arquivo requirements.txt
+
+# Manipulação e análise de dados
+pandas
+numpy
+
+# Visualização de dados
+matplotlib
+seaborn
+
+# Requisições HTTP para integração com APIs
+requests
+
+# Database (caso usemos um banco SQL em Python)
+sqlalchemy
+psycopg2  # Driver PostgreSQL
+
+# Para análise avançada (opcional)
+scipy
