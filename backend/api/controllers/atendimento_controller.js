@@ -1,26 +1,14 @@
 // backend/api/controllers/atendimento_controller.js
-const Atendimento = require("../../data/models/atendimento");
-const { calcularTaxaMortalidade } = require("../../services/analytics");
 
-exports.getAllAtendimentos = async (req, res) => {
-  try {
-    const atendimentos = await Atendimento.findAll();
-    res.status(200).json(atendimentos);
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao buscar atendimentos." });
-  }
+exports.getAtendimentos = (req, res) => {
+  // Aqui você buscaria os atendimentos do banco de dados
+  res.json([{ id: 1, paciente: "João Silva", data: "2023-10-30" }]);
 };
 
-exports.calculaTaxaMortalidade = async (req, res) => {
-  const { bairroId, populacaoBairro, populacaoTotal } = req.body;
-  try {
-    const taxaMortalidade = calcularTaxaMortalidade(
-      bairroId,
-      populacaoBairro,
-      populacaoTotal
-    );
-    res.status(200).json({ taxaMortalidade });
-  } catch (error) {
-    res.status(500).json({ error: "Erro ao calcular taxa de mortalidade." });
-  }
+exports.createAtendimento = (req, res) => {
+  const novoAtendimento = req.body;
+  // Aqui você salvaria o atendimento no banco de dados
+  res
+    .status(201)
+    .json({ message: "Atendimento criado com sucesso", data: novoAtendimento });
 };
