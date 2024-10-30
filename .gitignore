@@ -15,13 +15,21 @@ __pycache__/
 # Ignorar arquivos de log
 *.log
 
-# Ignorar arquivos de banco de dados
+# Ignorar arquivos de banco de dados SQLite
 *.sqlite3
 
-# Ignorar arquivos de pacotes instalados
+# Ignorar arquivos de pacotes instalados e builds
 *.egg-info/
 dist/
 build/
+*.egg
+*.whl
+
+# Ignorar arquivos temporários
+*.tmp
+*.temp
+*.swp
+*.swo
 
 # Ignorar arquivos do Node.js
 node_modules/
@@ -30,3 +38,18 @@ yarn-error.log
 
 # Ignorar arquivos de build do React
 build/
+
+# Ignorar arquivos de ambiente
+.env
+.env.*
+
+# Ignorar arquivos de configuração do editor de código
+.vscode/
+.idea/
+
+# Ignorar arquivos de configuração do sistema
+.DS_Store   # MacOS
+Thumbs.db   # Windows
+
+# Ignorar cache e metadata do Git
+.git/
