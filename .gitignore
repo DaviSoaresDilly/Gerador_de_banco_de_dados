@@ -1,0 +1,32 @@
+# Ignorar ambientes virtuais
+.venv/
+env/
+venv/
+
+# Ignorar arquivos de cache do Python
+__pycache__/
+*.py[cod]
+
+# Ignorar arquivos de configuração do Python
+*.pyo
+*.pyd
+*.pdb
+
+# Ignorar arquivos de log
+*.log
+
+# Ignorar arquivos de banco de dados
+*.sqlite3
+
+# Ignorar arquivos de pacotes instalados
+*.egg-info/
+dist/
+build/
+
+# Ignorar arquivos do Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Ignorar arquivos de build do React
+build/
